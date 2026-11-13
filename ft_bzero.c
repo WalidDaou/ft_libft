@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -16,7 +17,7 @@ void	ft_bzero(void *s, size_t n)
 int main()
 {
 	char hello[10] = "ello there";
-	ft_bzero(hello, 9);
+	bzero(hello, 9);
 	hello[9] = '\0';
 	printf("%s \n", hello);
 

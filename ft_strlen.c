@@ -10,9 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *a)
+#include <string.h>
+
+size_t	ft_strlen(const char *a)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (a[i] != "/0")

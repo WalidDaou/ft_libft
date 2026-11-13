@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int	ft_atoi(const char *str)
 {
@@ -29,8 +30,7 @@ int	ft_atoi(const char *str)
 	return ((int)(result * sign));
 }
 
-
 int main()
 {
-    printf("to int : ", ft_atoi("   -4242abc"));
+    printf("to int : %d", atoi("   -4242asdfd"));
 }
