@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wdaou <wdaou@student.42beirut.com>         #+#  +:+       +#+        */
+/*   By: wdaou <wdaou@student.42beirut.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-11 12:14:10 by wdaou             #+#    #+#             */
-/*   Updated: 2026-11-11 12:14:10 by wdaou            ###   ########.fr       */
+/*   Created: 2026/11/11 12:14:10 by wdaou             #+#    #+#             */
+/*   Updated: 2026/11/16 16:46:57 by wdaou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *a)
 	size_t	i;
 
 	i = 0;
-	while (a[i] != "/0")
+	while (a[i] != '\0')
 	{
 		i++;
 	}

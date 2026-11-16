@@ -1,75 +1,62 @@
-#include <stdlib.h>
-#include <stdio.h>
-static int ft_set(char const *set, char c)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wdaou <wdaou@student.42beirut.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/16 14:24:08 by wdaou             #+#    #+#             */
+/*   Updated: 2026/11/16 17:02:09 by wdaou            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+static int	ft_set(char const *set, char c)
 {
 	while (*set)
 	{
 		if (*set == c)
 			return (1);
-		set++;		
+		set++;
 	}
 	return (0);
 }
 
-
-
-char *ft_strtrim(char const *s1, char const *set)
+static char	*ft_return_empty(void)
 {
-	size_t left;
-	size_t right;
-	size_t len;
-	size_t i;
-	char *result;
+	char	*str;
 
-	if 	(!s1 || !set)
+	str = malloc(1);
+	if (!str)
 		return (NULL);
-	len = 0;
+	str[0] = '\0';
+	return (str);
+}
 
-	while (s1[len])
-		len++;
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	s[3];
+	char	*res;
 
-	if (len == 0)
-	{
-		result = (char *) malloc (1);
-		if (!result)
-			return (NULL);
-		result[0] = '\0';
-		return (result);
-	}
-	
-	left = 0;
-	while (s1[left] && ft_set(set, s1[left]))
-		left++;
-	if (left == len)
-	{
-		result = (char *) malloc (1);
-		if (!result)
-			return (NULL);
-		result[0] = '\0';
-		return (result);
-	}
-
-	right = len - 1;
-	while (right > left && ft_set(set, s1[right]))
-		right--;
-	
-		
-		len = right - left + 1;
-		// printf("left %zu, right %zu, len %zu ", left , right, len);
-
-
-	result = (char *)malloc(sizeof(char)  * (len + 1));
-	if (!result)
+	if (!s1 || !set)
 		return (NULL);
-	i= 0;
-	while (left <= right)
-	{
-		result[i] = s1[left];
-		i++;
-		left++;
-	}
-	result[i] = '\0';
-	return (result);
+	s[0] = 0;
+	while (s1[s[0]] && ft_strchr(set, s1[s[0]]))
+		s[0]++;
+	s[1] = ft_strlen(s1);
+	if (s[0] == s[1])
+		return (ft_return_empty());
+	while (s[1] > s[0] && ft_strchr(set, s1[s[1] - 1]))
+		s[1]--;
+	res = malloc(sizeof(char) * (s[1] - s[0] + 1));
+	if (!res)
+		return (NULL);
+	s[2] = 0;
+	while (s[0] < s[1])
+		res[s[2]++] = s1[s[0]++];
+	res[s[2]] = '\0';
+	return (res);
 }
 
 // int main()

@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wdaou <wdaou@student.42beirut.com>         #+#  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026-11-16 13:54:42 by wdaou             #+#    #+#             */
+/*   Updated: 2026-11-16 13:54:42 by wdaou            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	is_sep(char c, char *charset)
 {
@@ -85,25 +96,25 @@ char	**ft_split(char *str, char *charset)
 	return (res);
 }
 
-#include <stdio.h>
-int	main(void)
-{
-	char **temp;
-	char test[] = "hehhe,wello,;'testtest";
-	char spliter[] ="',;";
+// int	main(void)
+// {
+// 	char **temp;
+// 	char test[] = "hehhe,wello,;'testtest";
+// 	char spliter[] = "',;";
 
-	temp = ft_split(test , spliter);
+// 	temp = ft_split(test, spliter);
 
-	int i = 0;
+// 	int i = 0;
 
-	while (i < 3){
-		// int j = 0;
-		// while (temp[i][j] != '\0')
-		// {
-			printf("%s", temp[i]);
-		// 	j++;
-		// }
-		printf("\n");
-		i++;
-	}
-}
+// 	while (i < 3)
+// 	{
+// 		// int j = 0;
+// 		// while (temp[i][j] != '\0')
+// 		// {
+// 		printf("%s", temp[i]);
+// 		// 	j++;
+// 		// }
+// 		printf("\n");
+// 		i++;
+// 	}
+// }

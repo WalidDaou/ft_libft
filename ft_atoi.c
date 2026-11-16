@@ -1,5 +1,16 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wdaou <wdaou@student.42beirut.com>         #+#  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026-11-16 13:45:14 by wdaou             #+#    #+#             */
+/*   Updated: 2026-11-16 13:45:14 by wdaou            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -10,27 +21,23 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-	
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
-
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			sign = -1;
 		i++;
 	}
-	
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-
 	return ((int)(result * sign));
 }
 
-int main()
-{
-    printf("to int : %d", atoi("   -4242asdfd"));
-}
+// int	main(void)
+// {
+// 	printf("to int : %d", atoi("   -4242asdfd"));
+// }

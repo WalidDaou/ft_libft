@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-void	*ft_memset(void *ptr, int v, size_t num )
+void	*ft_memset(void *ptr, int v, size_t num)
 {
 	unsigned char	*p;
 	size_t			i;
@@ -22,13 +21,13 @@ void	*ft_memset(void *ptr, int v, size_t num )
 	p = (unsigned char *)ptr;
 	while (i > 0)
 	{
-		p[i - 1] = (unsigned char) v;
+		p[i - 1] = (unsigned char)v;
 		i--;
 	}
 	return (ptr);
 }
 
-// int	main()
+// int	main(void)
 // {
 // 	char test[10];
 // 	ft_memset(test, 'A', 8);
