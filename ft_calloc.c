@@ -6,7 +6,7 @@
 /*   By: wdaou <wdaou@student.42beirut.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 10:24:47 by wdaou             #+#    #+#             */
-/*   Updated: 2026/11/19 10:26:25 by wdaou            ###   ########.fr       */
+/*   Updated: 2026/11/19 12:07:46 by wdaou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (size != 0 && nmemb > (size_t)-1 / size)
 		return (NULL);
 	sum = nmemb * size;
+	if (sum == 0)
+	{
+		p = malloc(1);
+		if (!p)
+			return (NULL);
+		return (p);
+	}
 	p = malloc(sum);
 	if (!p)
 		return (NULL);
