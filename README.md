@@ -45,7 +45,6 @@ cc -Wall -Wextra -Werror main.c -L. -lft
 ## Resources
 
 - `man` pages of the original functions
-- [GNU C Library manual](https://www.gnu.org/software/libc/manual/)
-- [GNU Make manual](https://www.gnu.org/software/make/manual/)
+- [libftTester](https://github.com/Tripouille/libftTester)
 
 **Use of AI:** AI was used to help write this README.
