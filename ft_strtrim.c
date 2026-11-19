@@ -6,13 +6,11 @@
 /*   By: wdaou <wdaou@student.42beirut.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 14:24:08 by wdaou             #+#    #+#             */
-/*   Updated: 2026/11/16 17:02:09 by wdaou            ###   ########.fr       */
+/*   Updated: 2026/11/19 10:36:08 by wdaou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-
 
 static char	*ft_return_empty(void)
 {

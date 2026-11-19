@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wdaou <wdaou@student.42beirut.com>         #+#  +:+       +#+        */
+/*   By: wdaou <wdaou@student.42beirut.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-16 13:54:42 by wdaou             #+#    #+#             */
-/*   Updated: 2026-11-18 18:25:00 by wdaou            ###   ########.fr       */
+/*   Created: 2026/11/16 13:54:42 by wdaou             #+#    #+#             */
+/*   Updated: 2026/11/19 10:34:10 by wdaou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,24 +63,16 @@ static char	**free_all(char **res, int i)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**fill_words(char const *s, char c, char **res)
 {
-	char	**res;
-	int		words;
-	int		i;
+	int	i;
 
-	if (!s)
-		return (NULL);
-	words = count_words(s, c);
-	res = malloc(sizeof(char *) * (words + 1));
-	if (!res)
-		return (NULL);
 	i = 0;
 	while (*s)
 	{
 		while (*s && *s == c)
 			s++;
-		if (*s && *s != c)
+		if (*s)
 		{
 			res[i] = word_dup(s, c);
 			if (!res[i])
@@ -92,4 +84,18 @@ char	**ft_split(char const *s, char c)
 	}
 	res[i] = NULL;
 	return (res);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
+	int		words;
+
+	if (!s)
+		return (NULL);
+	words = count_words(s, c);
+	res = malloc(sizeof(char *) * (words + 1));
+	if (!res)
+		return (NULL);
+	return (fill_words(s, c, res));
 }
