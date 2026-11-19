@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wdaou <wdaou@student.42beirut.com>         #+#  +:+       +#+        */
+/*   By: wdaou <wdaou@student.42beirut.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-16 14:20:27 by wdaou             #+#    #+#             */
-/*   Updated: 2026-11-16 14:20:27 by wdaou            ###   ########.fr       */
+/*   Created: 2026/11/16 14:20:27 by wdaou             #+#    #+#             */
+/*   Updated: 2026/11/19 12:32:01 by wdaou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

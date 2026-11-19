@@ -6,11 +6,11 @@
 /*   By: wdaou <wdaou@student.42beirut.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 12:14:10 by wdaou             #+#    #+#             */
-/*   Updated: 2026/11/16 16:46:57 by wdaou            ###   ########.fr       */
+/*   Updated: 2026/11/19 12:31:45 by wdaou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *a)
 {

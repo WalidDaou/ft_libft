@@ -6,13 +6,13 @@
 /*   By: wdaou <wdaou@student.42beirut.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 13:54:42 by wdaou             #+#    #+#             */
-/*   Updated: 2026/11/19 10:34:10 by wdaou            ###   ########.fr       */
+/*   Updated: 2026/11/19 12:31:09 by wdaou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *str, char c)
+static int	count_words(char const *str, char c)
 {
 	int	count;
 	int	i;
@@ -33,7 +33,7 @@ int	count_words(char const *str, char c)
 	return (count);
 }
 
-char	*word_dup(char const *str, char c)
+static char	*word_dup(char const *str, char c)
 {
 	int		len;
 	int		i;
