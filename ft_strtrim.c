@@ -12,16 +12,7 @@
 
 #include "libft.h"
 
-static int	ft_set(char const *set, char c)
-{
-	while (*set)
-	{
-		if (*set == c)
-			return (1);
-		set++;
-	}
-	return (0);
-}
+
 
 static char	*ft_return_empty(void)
 {
